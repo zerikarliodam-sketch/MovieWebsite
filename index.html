@@ -15,34 +15,117 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+<style>
+.site-footer {
+  background: linear-gradient(180deg, #0b0b0b, #000);
+  padding: 50px 20px 30px;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.site-footer h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  margin-bottom: 30px;
+}
+
+/* VERTICAL SCROLL AREA */
+.footer-videos {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* SCROLLBAR */
+.footer-videos::-webkit-scrollbar {
+  width: 4px;
+}
+.footer-videos::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+
+/* VIDEO CARD */
+.footer-video {
+  position: relative;
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  transition: transform .3s ease;
+}
+
+.footer-video:hover {
+  transform: scale(1.02);
+}
+
+/* LIVE BADGE */
+.live-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e50914;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.12em;
+  z-index: 10;
+  box-shadow: 0 0 12px rgba(229,9,20,0.6);
+}
+
+/* VIDEO */
+.footer-video iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  background: #000;
+}
+
+/* TITLE */
+.footer-video p {
+  padding: 12px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  letter-spacing: 0.08em;
+}
+
+/* COPYRIGHT */
+.footer-copy {
+  display: block;
+  text-align: center;
+  margin-top: 35px;
+  font-size: 12px;
+  color: #777;
+  letter-spacing: 0.14em;
+}
+</style>
+
 <footer class="site-footer">
   <h2>ONLINE TV</h2>
 
   <div class="footer-videos">
+
     <div class="footer-video">
+      <span class="live-badge">LIVE</span>
       <iframe
         src="https://stream8.cinerama.uz/1016/tracks-v1a1/mono.m3u8"
         allowfullscreen>
       </iframe>
-      <p>ZO'R TV </p>
+      <p>ZO'R TV</p>
     </div>
 
-    <div class="footer-video">
-      <iframe
-        src="https://stream8.cinerama.uz/1017/tracks-v1a1/playlist.m3u8"
-        allowfullscreen>
-      </iframe>
-      <p>Sevimli TV </p>
-    </div>
-
-    <div class="footer-video">
-      <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID_3"
-        allowfullscreen>
-      </iframe>
-      <p>Live TV 3</p>
-    </div>
   </div>
 
-  <span class="footer-copy">© 2025 Online TV</span>
+  <span class="footer-copy">© 2025 ONLINE TV</span>
 </footer>
